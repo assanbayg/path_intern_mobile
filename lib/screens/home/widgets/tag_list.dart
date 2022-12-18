@@ -15,7 +15,7 @@ class _TagListState extends State<TagList> {
       height: 40,
       child: ListView.separated(
           scrollDirection: Axis.horizontal,
-          itemBuilder: (contex, index) => GestureDetector(
+          itemBuilder: (context, index) => GestureDetector(
               onTap: () {
                 setState(() {
                   selected = index;

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:path_intern_mobile/screens/search/search.dart';
+import '../../search/search.dart';
 
 class SearchCard extends StatelessWidget {
   @override

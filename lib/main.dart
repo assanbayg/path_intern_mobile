@@ -1,5 +1,10 @@
 /*
   Need to fix SeachPage: to split search.dart into widgets and keep search function
+  Authentication
+  Resume
+  Filters
+
+  Messenger
 */
 
 import 'package:flutter/material.dart';
@@ -15,7 +20,7 @@ class App extends StatelessWidget {
     primaryColor: Color.fromARGB(255, 26, 83, 92),
     fontFamily: 'Quicksand',
   );
-  final secondaryColor = Color.fromARGB(255, 254, 197, 12);
+  final secondaryColor = Color.fromARGB(255, 254, 197, 12); 
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,

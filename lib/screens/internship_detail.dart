@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:path_intern_mobile/models/intership.dart';
-import 'package:path_intern_mobile/widgets/bookmark.dart';
-import 'package:path_intern_mobile/widgets/icon_text.dart';
+import '../models/intership.dart';
+import '../widgets/bookmark.dart';
+import '../widgets/icon_text.dart';
 
 class InternshipDetail extends StatelessWidget {
   final Internship internship;
@@ -92,6 +92,7 @@ class InternshipDetail extends StatelessWidget {
                   ),
                 ),
                 Container(
+                  width: 300,
                   padding: EdgeInsets.symmetric(
                     vertical: 15,
                   ),
@@ -102,10 +103,13 @@ class InternshipDetail extends StatelessWidget {
                         color: Colors.yellow,
                       ),
                       SizedBox(width: 10),
-                      Text(
-                        internship.description,
-                        style: TextStyle(
-                          color: Colors.grey,
+                      Flexible(
+                        child: Text(
+                          internship.description,
+                          //softWrap: true,
+                          style: TextStyle(
+                            color: Colors.grey,
+                          ),
                         ),
                       ),
                     ],
@@ -148,6 +152,7 @@ class InternshipDetail extends StatelessWidget {
                           ),
                         ))
                     .toList(),
+                SizedBox(height: 10),
                 Text(
                   'Conditions',
                   style: TextStyle(
@@ -187,45 +192,45 @@ class InternshipDetail extends StatelessWidget {
                       ),
                     )
                     .toList(),
-                SizedBox(height: 10),
-                Container(
-                  padding: EdgeInsets.all(15),
-                  decoration: BoxDecoration(
-                    color: Colors.grey.withOpacity(0.2),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text('Reviews',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          )),
-                      SizedBox(height: 10),
-                      // Container(
-                      //   width: 300,
-                      //   decoration: BoxDecoration(
-                      //       color: Colors.white,
-                      //       borderRadius: BorderRadius.circular(30)),
-                      //   child: TextField(
-                      //     decoration: InputDecoration(),
-                      //   ),
-                      // ),
-                      TextField(
-                        decoration: InputDecoration(
-                          filled: true,
-                          contentPadding: EdgeInsets.all(20),
-                          hintText: 'Write your review',
-                          fillColor: Colors.white,
-                          focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(30),
-                              borderSide: BorderSide(
-                                  color: Colors.grey.withOpacity(0.3))),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                //SizedBox(height: 10),
+                // Container(
+                //   padding: EdgeInsets.all(15),
+                //   decoration: BoxDecoration(
+                //     color: Colors.grey.withOpacity(0.2),
+                //     borderRadius: BorderRadius.circular(10),
+                //   ),
+                //   child: Column(
+                //     crossAxisAlignment: CrossAxisAlignment.start,
+                //     children: [
+                //       Text('Reviews',
+                //           style: TextStyle(
+                //             fontWeight: FontWeight.bold,
+                //           )),
+                //       SizedBox(height: 10),
+                //       // Container(
+                //       //   width: 300,
+                //       //   decoration: BoxDecoration(
+                //       //       color: Colors.white,
+                //       //       borderRadius: BorderRadius.circular(30)),
+                //       //   child: TextField(
+                //       //     decoration: InputDecoration(),
+                //       //   ),
+                //       // ),
+                //       TextField(
+                //         decoration: InputDecoration(
+                //           filled: true,
+                //           contentPadding: EdgeInsets.all(20),
+                //           hintText: 'Write your review',
+                //           fillColor: Colors.white,
+                //           focusedBorder: OutlineInputBorder(
+                //               borderRadius: BorderRadius.circular(30),
+                //               borderSide: BorderSide(
+                //                   color: Colors.grey.withOpacity(0.3))),
+                //         ),
+                //       ),
+                //     ],
+                //   ),
+                // ),
                 Container(
                   margin: EdgeInsets.symmetric(vertical: 25),
                   height: 45,
