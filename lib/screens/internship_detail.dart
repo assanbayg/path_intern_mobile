@@ -243,7 +243,13 @@ class InternshipDetail extends StatelessWidget {
                         borderRadius: BorderRadius.circular(20),
                       ),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text('Sent!'),
+                        ),
+                      );
+                    },
                     child: Text('Apply Now'),
                   ),
                 ),

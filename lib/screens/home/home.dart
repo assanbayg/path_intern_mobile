@@ -28,16 +28,6 @@ class HomePage extends StatelessWidget {
           ],
         )
       ]),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Theme.of(context).colorScheme.secondary,
-        elevation: 0,
-        onPressed: () {},
-        child: Icon(
-          Icons.add,
-          color: Colors.white,
-        ),
-      ),
       bottomNavigationBar: Theme(
         data: ThemeData(
           splashColor: Colors.transparent,
@@ -56,10 +46,6 @@ class HomePage extends StatelessWidget {
             BottomNavigationBarItem(
               label: 'Case',
               icon: Icon(Icons.cases_outlined),
-            ),
-            BottomNavigationBarItem(
-              label: '',
-              icon: Text(''),
             ),
             BottomNavigationBarItem(
               label: 'Chat',

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 class Notifications extends StatelessWidget {
-  final notificationsList = <String>['not1', 'not2', 'not3'];
+  final notificationsList = <String>[
+    'Ваша заявка рассматривается!',
+    'Вы отправили свою заявку!'
+  ];
 
   @override
   Widget build(BuildContext context) {

@@ -1,7 +1,16 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:path_intern_mobile/screens/authentication/login.dart';
 import '../../../widgets/notifications.dart';
 
 class HomeAppBar extends StatelessWidget {
+  void _signOut() {
+    FirebaseAuth.instance.signOut();
+    runApp(new MaterialApp(
+      home: new LoginPage(),
+    ));
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -52,15 +61,18 @@ class HomeAppBar extends StatelessWidget {
                   ),
                 ),
               ),
-              Container(
-                margin: EdgeInsets.only(
-                  top: 30,
-                ),
-                child: ClipOval(
-                  child: Icon(
-                    Icons.login,
-                    size: 30,
-                    color: Colors.grey,
+              GestureDetector(
+                onTap: _signOut,
+                child: Container(
+                  margin: EdgeInsets.only(
+                    top: 30,
+                  ),
+                  child: ClipOval(
+                    child: Icon(
+                      Icons.login,
+                      size: 30,
+                      color: Colors.grey,
+                    ),
                   ),
                 ),
               ),
