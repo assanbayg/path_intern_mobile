@@ -5,6 +5,8 @@ import 'auth_services.dart';
 import 'create_account.dart';
 
 class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
+
   @override
   State<LoginPage> createState() => _LoginPageState();
 }
@@ -27,7 +29,6 @@ class _LoginPageState extends State<LoginPage> {
                   fontSize: 25,
                 ),
               ),
-              SizedBox(height: 30),
               SizedBox(
                 width: 200,
                 child: TextField(
@@ -43,13 +44,12 @@ class _LoginPageState extends State<LoginPage> {
                   decoration: const InputDecoration(hintText: 'password'),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               ElevatedButton(
-                child: Text('Login'),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Theme.of(context).primaryColor,
                   padding:
-                      EdgeInsets.only(left: 40, right: 40, top: 5, bottom: 5),
+                      const EdgeInsets.only(left: 40, right: 40, top: 5, bottom: 5),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
                 ),
@@ -61,7 +61,7 @@ class _LoginPageState extends State<LoginPage> {
                   if (message!.contains('Success')) {
                     Navigator.of(context).pushReplacement(
                       MaterialPageRoute(
-                        builder: (context) => HomePage(),
+                        builder: (context) => const HomePage(),
                       ),
                     );
                   }
@@ -71,6 +71,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   );
                 },
+                child: const Text('Login'),
               ),
               TextButton(
                 onPressed: () {

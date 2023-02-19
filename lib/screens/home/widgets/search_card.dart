@@ -2,16 +2,18 @@ import 'package:flutter/material.dart';
 import '../../search/search.dart';
 
 class SearchCard extends StatelessWidget {
+  const SearchCard({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
       width: 340,
       height: 260,
-      padding: EdgeInsets.symmetric(
+      padding: const EdgeInsets.symmetric(
         horizontal: 25,
         vertical: 40,
       ),
-      margin: EdgeInsets.all(25),
+      margin: const EdgeInsets.all(25),
       decoration: BoxDecoration(
         color: Theme.of(context).primaryColor,
         borderRadius: BorderRadius.circular(30),
@@ -22,7 +24,7 @@ class SearchCard extends StatelessWidget {
             children: [
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+                children: const [
                   Text(
                     'Fast Search',
                     style: TextStyle(
@@ -41,24 +43,24 @@ class SearchCard extends StatelessWidget {
               ),
               Container(
                   height: 80,
-                  margin: EdgeInsets.only(left: 30, bottom: 20),
-                  child: Image.asset('sun.png')),
+                  margin: const EdgeInsets.only(left: 30, bottom: 20),
+                  child: Image.asset('assets/sun.png')),
             ],
           ),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
           GestureDetector(
             onTap: () {
               Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => SearchPage()));
+                  .push(MaterialPageRoute(builder: (context) => const SearchPage()));
             },
             child: Container(
-              padding: EdgeInsets.all(12),
+              padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
                 color: Colors.white,
               ),
               child: Row(
-                children: [
+                children: const [
                   Icon(Icons.search),
                   SizedBox(width: 10),
                   Text(

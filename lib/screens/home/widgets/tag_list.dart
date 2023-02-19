@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class TagList extends StatefulWidget {
+  const TagList({super.key});
+
   @override
   State<TagList> createState() => _TagListState();
 }
@@ -11,7 +13,7 @@ class _TagListState extends State<TagList> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 25),
+      padding: const EdgeInsets.symmetric(horizontal: 25),
       height: 40,
       child: ListView.separated(
           scrollDirection: Axis.horizontal,
@@ -22,7 +24,7 @@ class _TagListState extends State<TagList> {
                 });
               },
               child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                 decoration: BoxDecoration(
                   color: selected == index
                       ? Theme.of(context).primaryColor.withOpacity(0.2)
@@ -36,7 +38,7 @@ class _TagListState extends State<TagList> {
                 ),
                 child: Text(tagsList[index]),
               )),
-          separatorBuilder: (_, index) => SizedBox(
+          separatorBuilder: (_, index) => const SizedBox(
                 width: 15,
               ),
           itemCount: tagsList.length),

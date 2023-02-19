@@ -5,6 +5,8 @@ import 'widgets/search_app_bar.dart';
 import 'widgets/search_option.dart';
 
 class SearchPage extends StatefulWidget {
+  const SearchPage({super.key});
+
   @override
   State<SearchPage> createState() => _SearchPageState();
 }
@@ -39,9 +41,9 @@ class _SearchPageState extends State<SearchPage> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SearchAppBar(),
+              const SearchAppBar(),
               Container(
-                margin: EdgeInsets.all(25),
+                margin: const EdgeInsets.all(25),
                 child: Row(
                   children: [
                     Expanded(
@@ -57,29 +59,29 @@ class _SearchPageState extends State<SearchPage> {
                             borderSide: BorderSide.none,
                           ),
                           hintText: 'Search',
-                          hintStyle: TextStyle(
+                          hintStyle: const TextStyle(
                             color: Colors.grey,
                             fontSize: 18,
                           ),
                           contentPadding: EdgeInsets.zero,
                           prefixIcon: Container(
-                            padding: EdgeInsets.all(15),
-                            child: Icon(Icons.search),
+                            padding: const EdgeInsets.all(15),
+                            child: const Icon(Icons.search),
                           ),
                         ),
                         onChanged: searchInternship,
                       ),
                     ),
-                    SizedBox(width: 10),
+                    const SizedBox(width: 10),
                     Container(
                       height: 50,
                       width: 50,
-                      padding: EdgeInsets.all(13),
+                      padding: const EdgeInsets.all(13),
                       decoration: BoxDecoration(
                         color: Theme.of(context).colorScheme.secondary,
                         borderRadius: BorderRadius.circular(20),
                       ),
-                      child: Icon(
+                      child: const Icon(
                         Icons.filter_alt_outlined,
                         color: Colors.white,
                       ),
@@ -87,13 +89,13 @@ class _SearchPageState extends State<SearchPage> {
                   ],
                 ),
               ),
-              SearchOption(),
+              const SearchOption(),
               Expanded(
                   //SearchList
                   child: Container(
-                margin: EdgeInsets.only(top: 25),
+                margin: const EdgeInsets.only(top: 25),
                 child: ListView.separated(
-                    padding: EdgeInsets.only(
+                    padding: const EdgeInsets.only(
                       left: 25,
                       right: 25,
                       bottom: 25,
@@ -102,7 +104,7 @@ class _SearchPageState extends State<SearchPage> {
                           internshipList[index],
                           showTime: true,
                         ),
-                    separatorBuilder: (_, index) => SizedBox(height: 20),
+                    separatorBuilder: (_, index) => const SizedBox(height: 20),
                     itemCount: internshipList.length),
               )),
             ],

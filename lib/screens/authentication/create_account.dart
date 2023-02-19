@@ -27,7 +27,7 @@ class _CreateAccountState extends State<CreateAccount> {
                 fontSize: 25,
               ),
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             SizedBox(
               width: 200,
               child: TextField(
@@ -52,7 +52,7 @@ class _CreateAccountState extends State<CreateAccount> {
               style: ElevatedButton.styleFrom(
                 backgroundColor: Theme.of(context).primaryColor,
                 padding:
-                    EdgeInsets.only(left: 40, right: 40, top: 5, bottom: 5),
+                    const EdgeInsets.only(left: 40, right: 40, top: 5, bottom: 5),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20)),
               ),

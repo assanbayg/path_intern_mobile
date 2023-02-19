@@ -24,7 +24,7 @@ class Internship {
     return [
       Internship(
         'Fruit Republic',
-        'fruit_republic.png',
+        'assets/fruit_republic.png',
         true,
         'Бармен',
         'Алматы',
@@ -46,7 +46,7 @@ class Internship {
       ),
       Internship(
         'LV Team',
-        'nis.jpg',
+        'assets/nis.jpg',
         false,
         'CMM',
         'Elibaeva 2,\nAlmaty',
@@ -64,7 +64,7 @@ class Internship {
       ),
       Internship(
         'Jusan Mobile',
-        'image.png',
+        'assets/image.png',
         true,
         'Kotlin Developer',
         'Koktem-1, \nAlmaty',

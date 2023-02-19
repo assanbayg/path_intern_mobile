@@ -21,26 +21,29 @@ class App extends StatelessWidget {
   @override
   final loggedIn = false;
   final ThemeData theme = ThemeData(
-    primaryColor: Color.fromARGB(255, 26, 83, 92),
+    primaryColor: const Color.fromARGB(255, 26, 83, 92),
     fontFamily: 'Quicksand',
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        padding: EdgeInsets.symmetric(horizontal: 16),
+        padding: const EdgeInsets.symmetric(horizontal: 16),
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(15)),
         ),
-        textStyle: TextStyle(fontFamily: 'Quicksand'),
+        textStyle: const TextStyle(fontFamily: 'Quicksand'),
       ),
     ),
   );
-  final secondaryColor = Color.fromARGB(255, 254, 197, 12);
+  final secondaryColor = const Color.fromARGB(255, 254, 197, 12);
+
+  App({super.key});
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Path',
       theme: theme.copyWith(
           colorScheme: theme.colorScheme.copyWith(secondary: secondaryColor)),
-      home: loggedIn ? HomePage() : LoginPage(),
+      home: HomePage(),
     );
   }
 }

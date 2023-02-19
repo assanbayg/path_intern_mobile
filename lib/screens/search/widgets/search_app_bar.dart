@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import '../../../widgets/notifications.dart';
 
 class SearchAppBar extends StatelessWidget {
+  const SearchAppBar({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -19,12 +21,12 @@ class SearchAppBar extends StatelessWidget {
                 Navigator.of(context).pop();
               },
               child: Container(
-                padding: EdgeInsets.all(5),
+                padding: const EdgeInsets.all(5),
                 decoration: BoxDecoration(
                   color: Theme.of(context).primaryColor,
                   shape: BoxShape.circle,
                 ),
-                child: Icon(
+                child: const Icon(
                   Icons.arrow_back,
                   color: Colors.white,
                 ),
@@ -42,7 +44,7 @@ class SearchAppBar extends StatelessWidget {
                     );
                   },
                   child: Stack(
-                    children: [
+                    children: const [
                       Icon(
                         Icons.notifications_none_outlined,
                         size: 30,
@@ -51,8 +53,8 @@ class SearchAppBar extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(width: 20),
-                Icon(Icons.more_horiz_outlined),
+                const SizedBox(width: 20),
+                const Icon(Icons.more_horiz_outlined),
               ],
             ),
           ],

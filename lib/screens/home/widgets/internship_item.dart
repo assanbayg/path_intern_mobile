@@ -6,7 +6,7 @@ import '../../../widgets/bookmark.dart';
 class InternshipItem extends StatefulWidget {
   final Internship internship;
   final bool showTime;
-  InternshipItem(this.internship, {this.showTime = false});
+  const InternshipItem(this.internship, {super.key, this.showTime = false});
 
   @override
   State<InternshipItem> createState() => _InternshipItemState();
@@ -17,7 +17,7 @@ class _InternshipItemState extends State<InternshipItem> {
   Widget build(BuildContext context) {
     return Container(
       width: 270,
-      padding: EdgeInsets.all(20),
+      padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30),
         color: Colors.white,
@@ -33,17 +33,17 @@ class _InternshipItemState extends State<InternshipItem> {
                   Container(
                     height: 40,
                     width: 40,
-                    padding: EdgeInsets.all(8),
+                    padding: const EdgeInsets.all(8),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.grey.withOpacity(0.1),
                     ),
                     child: Image.asset(widget.internship.logoURL),
                   ),
-                  SizedBox(width: 10),
+                  const SizedBox(width: 10),
                   Text(
                     widget.internship.company,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.grey,
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
@@ -54,14 +54,14 @@ class _InternshipItemState extends State<InternshipItem> {
               Bookmark(widget.internship.isSaved),
             ],
           ),
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
           Text(
             widget.internship.title,
-            style: TextStyle(
+            style: const TextStyle(
               fontWeight: FontWeight.bold,
             ),
           ),
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [

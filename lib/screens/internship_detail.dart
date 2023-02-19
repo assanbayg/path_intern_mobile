@@ -5,7 +5,7 @@ import '../widgets/icon_text.dart';
 
 class InternshipDetail extends StatelessWidget {
   final Internship internship;
-  InternshipDetail(this.internship);
+  const InternshipDetail(this.internship, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class InternshipDetail extends StatelessWidget {
       body: SafeArea(
         child: Container(
           height: double.infinity,
-          padding: EdgeInsets.all(25),
+          padding: const EdgeInsets.all(25),
           color: Colors.white,
           child: SingleChildScrollView(
             child: Column(
@@ -28,17 +28,17 @@ class InternshipDetail extends StatelessWidget {
                         Container(
                           height: 40,
                           width: 40,
-                          padding: EdgeInsets.all(8),
+                          padding: const EdgeInsets.all(8),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: Colors.grey.withOpacity(0.1),
                           ),
                           child: Image.asset(internship.logoURL),
                         ),
-                        SizedBox(width: 10),
+                        const SizedBox(width: 10),
                         Text(
                           internship.company,
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
                           ),
@@ -48,25 +48,25 @@ class InternshipDetail extends StatelessWidget {
                     Row(
                       children: [
                         Bookmark(internship.isSaved),
-                        SizedBox(width: 10),
-                        Icon(Icons.more_horiz_outlined),
+                        const SizedBox(width: 10),
+                        const Icon(Icons.more_horiz_outlined),
                       ],
                     ),
                   ],
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
                       internship.title,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 26,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     Row(
-                      children: [
+                      children: const [
                         Icon(Icons.star, color: Colors.yellow),
                         Icon(Icons.star, color: Colors.yellow),
                         Icon(Icons.star, color: Colors.yellow),
@@ -76,7 +76,7 @@ class InternshipDetail extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 15),
+                const SizedBox(height: 15),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -84,8 +84,8 @@ class InternshipDetail extends StatelessWidget {
                     IconText(Icons.access_time_outlined, internship.time),
                   ],
                 ),
-                SizedBox(height: 30),
-                Text(
+                const SizedBox(height: 30),
+                const Text(
                   'Description',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
@@ -93,21 +93,21 @@ class InternshipDetail extends StatelessWidget {
                 ),
                 Container(
                   width: 300,
-                  padding: EdgeInsets.symmetric(
+                  padding: const EdgeInsets.symmetric(
                     vertical: 15,
                   ),
                   child: Row(
                     children: [
-                      Icon(
+                      const Icon(
                         Icons.description_outlined,
                         color: Colors.yellow,
                       ),
-                      SizedBox(width: 10),
+                      const SizedBox(width: 10),
                       Flexible(
                         child: Text(
                           internship.description,
                           //softWrap: true,
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.grey,
                           ),
                         ),
@@ -115,35 +115,35 @@ class InternshipDetail extends StatelessWidget {
                     ],
                   ),
                 ),
-                Text(
+                const Text(
                   'Requirement',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 ...internship.requirements
                     .map((e) => Container(
-                          margin: EdgeInsets.symmetric(vertical: 5),
+                          margin: const EdgeInsets.symmetric(vertical: 5),
                           child: Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Container(
-                                margin: EdgeInsets.only(top: 10),
+                                margin: const EdgeInsets.only(top: 10),
                                 height: 5,
                                 width: 5,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                   shape: BoxShape.circle,
                                   color: Colors.black,
                                 ),
                               ),
-                              SizedBox(width: 10),
+                              const SizedBox(width: 10),
                               ConstrainedBox(
-                                constraints: BoxConstraints(
+                                constraints: const BoxConstraints(
                                   maxWidth: 300,
                                 ),
                                 child: Text(e,
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       wordSpacing: 2.5,
                                       height: 1.5,
                                     )),
@@ -152,37 +152,37 @@ class InternshipDetail extends StatelessWidget {
                           ),
                         ))
                     .toList(),
-                SizedBox(height: 10),
-                Text(
+                const SizedBox(height: 10),
+                const Text(
                   'Conditions',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 ...internship.conditions
                     .map(
                       (e) => Container(
-                        margin: EdgeInsets.symmetric(vertical: 5),
+                        margin: const EdgeInsets.symmetric(vertical: 5),
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Container(
-                              margin: EdgeInsets.only(top: 10),
+                              margin: const EdgeInsets.only(top: 10),
                               height: 5,
                               width: 5,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: Colors.black,
                               ),
                             ),
-                            SizedBox(width: 10),
+                            const SizedBox(width: 10),
                             ConstrainedBox(
-                              constraints: BoxConstraints(
+                              constraints: const BoxConstraints(
                                 maxWidth: 300,
                               ),
                               child: Text(e,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     wordSpacing: 2.5,
                                     height: 1.5,
                                   )),
@@ -232,7 +232,7 @@ class InternshipDetail extends StatelessWidget {
                 //   ),
                 // ),
                 Container(
-                  margin: EdgeInsets.symmetric(vertical: 25),
+                  margin: const EdgeInsets.symmetric(vertical: 25),
                   height: 45,
                   width: double.maxFinite,
                   child: ElevatedButton(
@@ -245,12 +245,12 @@ class InternshipDetail extends StatelessWidget {
                     ),
                     onPressed: () {
                       ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
+                        const SnackBar(
                           content: Text('Sent!'),
                         ),
                       );
                     },
-                    child: Text('Apply Now'),
+                    child: const Text('Apply Now'),
                   ),
                 ),
               ],

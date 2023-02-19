@@ -5,6 +5,8 @@ import 'widgets/tag_list.dart';
 import 'widgets/internship_list.dart';
 
 class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,9 +23,9 @@ class HomePage extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            HomeAppBar(),
-            SearchCard(),
-            TagList(),
+            const HomeAppBar(),
+            const SearchCard(),
+            const TagList(),
             InternshipList(),
           ],
         )
@@ -38,7 +40,7 @@ class HomePage extends StatelessWidget {
           showUnselectedLabels: false,
           selectedItemColor: Theme.of(context).primaryColor,
           type: BottomNavigationBarType.fixed,
-          items: [
+          items: const [
             BottomNavigationBarItem(
               label: 'Home',
               icon: Icon(Icons.home),

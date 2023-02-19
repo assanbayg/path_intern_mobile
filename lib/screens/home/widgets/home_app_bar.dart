@@ -4,10 +4,12 @@ import 'package:path_intern_mobile/screens/authentication/login.dart';
 import '../../../widgets/notifications.dart';
 
 class HomeAppBar extends StatelessWidget {
+  const HomeAppBar({super.key});
+
   void _signOut() {
     FirebaseAuth.instance.signOut();
-    runApp(new MaterialApp(
-      home: new LoginPage(),
+    runApp(const MaterialApp(
+      home: LoginPage(),
     ));
   }
 
@@ -21,7 +23,7 @@ class HomeAppBar extends StatelessWidget {
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
+            children: const [
               Text(
                 "Welcome Home",
                 style: TextStyle(
@@ -49,9 +51,9 @@ class HomeAppBar extends StatelessWidget {
                   );
                 },
                 child: Container(
-                  margin: EdgeInsets.only(top: 30, right: 10),
+                  margin: const EdgeInsets.only(top: 30, right: 10),
                   child: Stack(
-                    children: [
+                    children: const [
                       Icon(
                         Icons.notifications_none_outlined,
                         size: 30,
@@ -64,10 +66,10 @@ class HomeAppBar extends StatelessWidget {
               GestureDetector(
                 onTap: _signOut,
                 child: Container(
-                  margin: EdgeInsets.only(
+                  margin: const EdgeInsets.only(
                     top: 30,
                   ),
-                  child: ClipOval(
+                  child: const ClipOval(
                     child: Icon(
                       Icons.login,
                       size: 30,

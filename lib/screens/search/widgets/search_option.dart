@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class SearchOption extends StatefulWidget {
+  const SearchOption({super.key});
+
   @override
   State<SearchOption> createState() => _SearchOptionState();
 }
@@ -16,11 +18,11 @@ class _SearchOptionState extends State<SearchOption> {
   @override
   Widget build(BuildContext context) {
     var keys = optionMap.keys.toList();
-    return Container(
+    return SizedBox(
       height: 25,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
-        padding: EdgeInsets.symmetric(horizontal: 25),
+        padding: const EdgeInsets.symmetric(horizontal: 25),
         itemBuilder: (context, index) => GestureDetector(
           onTap: () {
             setState(() {
@@ -29,7 +31,7 @@ class _SearchOptionState extends State<SearchOption> {
             });
           },
           child: Container(
-            padding: EdgeInsets.symmetric(horizontal: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 10),
             decoration: BoxDecoration(
               color: optionMap[keys[index]] == true
                   ? Theme.of(context).primaryColor
@@ -56,7 +58,7 @@ class _SearchOptionState extends State<SearchOption> {
                 if (optionMap[keys[index]] == true &&
                     optionMap[keys[index]] != null)
                   Row(
-                    children: [
+                    children: const [
                       SizedBox(width: 10),
                       Icon(
                         Icons.close,
@@ -69,7 +71,7 @@ class _SearchOptionState extends State<SearchOption> {
             ),
           ),
         ),
-        separatorBuilder: (_, index) => SizedBox(width: 10),
+        separatorBuilder: (_, index) => const SizedBox(width: 10),
         itemCount: optionMap.length,
       ),
     );

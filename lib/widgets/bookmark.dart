@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class Bookmark extends StatefulWidget {
   bool isSaved;
-  Bookmark(this.isSaved);
+  Bookmark(this.isSaved, {super.key});
   @override
   State<Bookmark> createState() => _BookmarkState();
 }

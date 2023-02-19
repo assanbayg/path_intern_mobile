@@ -5,13 +5,15 @@ import './internship_item.dart';
 
 class InternshipList extends StatelessWidget {
   final internshipList = Internship.generateInternships();
+
+  InternshipList({super.key});
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 25),
+      margin: const EdgeInsets.symmetric(vertical: 25),
       height: 160,
       child: ListView.separated(
-          padding: EdgeInsets.symmetric(
+          padding: const EdgeInsets.symmetric(
             horizontal: 25,
           ),
           scrollDirection: Axis.horizontal,
@@ -22,7 +24,7 @@ class InternshipList extends StatelessWidget {
                         InternshipDetail(internshipList[index])));
               },
               child: InternshipItem(internshipList[index])),
-          separatorBuilder: (_, index) => SizedBox(
+          separatorBuilder: (_, index) => const SizedBox(
                 width: 15,
               ),
           itemCount: internshipList.length),
